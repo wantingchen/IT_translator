@@ -68,6 +68,10 @@ int convert(char* arg) {
                     do {
                         d = removeFullSpace(strParser);
                     } while (d!=0);
+                    do {
+                        d = removeFFSpace(strParser);
+                    } while (d!=0);
+
                     fprintf(fd_out, "%s,", strParser);
                     //printf("%s,", strParser);
                 }

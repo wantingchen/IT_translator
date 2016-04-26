@@ -1,6 +1,7 @@
 CC ?= gcc
 CFLAGS_common ?= -Wall -O2 -Os -Wall -Wextra -pedantic -Wstrict-overflow -fno-strict-aliasing
-CFLAGS_test = -g -pg -Werror -Wshadow
+CFLAGS_opt = -flto -march=native
+CFLAGS_test = -pg -Werror -Wshadow
 EXEC = generateCSV
 
 generateCSV: generateCSV.c
